@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="portal.html">Client Portal</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="philosophy.html">Philosophy</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="portal.html">Client Portal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Let's <span class="gradient-text">Connect</span></h1>
+            <p class="lead">Ready to transform your organization's AI capabilities? We're here to help you navigate the rising tide.</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p style="margin-bottom: 2rem;">Whether you're just starting to explore AI possibilities or ready to scale your transformation, we'd love to hear from you.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✓</div>
+                        <div>
+                            <h4>Book a Strategy Session</h4>
+                            <p>Schedule a personalized 90-minute CEO strategy session to assess your AI readiness.</p>
+                            <a href="mailto:contact@aestusconsulting.com?subject=Strategy%20Session%20Request" class="btn btn-secondary" style="margin-top: 1rem;">Request Session</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <h4>Website</h4>
+                            <p><a href="https://www.aestusconsulting.com">www.aestusconsulting.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-100); border-radius: 16px;">
+                        <h4 style="margin-bottom: 1rem;">What to Expect</h4>
+                        <ul class="feature-list">
+                            <li>Response within 24-48 business hours</li>
+                            <li>No-pressure conversation about your needs</li>
+                            <li>Customized recommendations for your situation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Quick Contact</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--gray-600);">Send us a message and we'll get back to you promptly.</p>
+                        
+                        <form action="mailto:contact@aestusconsulting.com" method="post" enctype="text/plain">
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Your Name</label>
+                                <input type="text" name="name" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Email Address</label>
+                                <input type="email" name="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Company</label>
+                                <input type="text" name="company" style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">How Can We Help?</label>
+                                <textarea name="message" rows="4" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; resize: vertical; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'" placeholder="Tell us about your AI transformation goals..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section id="survey" class="section-gray">
+        <div class="container">
+            <h2 style="text-align: center;">AI Quick Check <span class="gradient-text">Survey</span></h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Help us understand your current AI adoption status. This quick survey takes about 5 minutes and helps us identify your specific gaps and high-pain tasks for immediate automation.</p>
+            
+            <div class="survey-embed" style="max-width: 900px; margin: 0 auto;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZzeF1cbjn9M2JROarEV5ocQnkDsfz8-S0PP9HsNKJ2xe3Ew/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 8px;">Loading...</iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: var(--gray-600);">Prefer to open in a new tab? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZzeF1cbjn9M2JROarEV5ocQnkDsfz8-S0PP9HsNKJ2xe3Ew/viewform" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 500;">Click here to open the full survey →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            
+            <div class="grid-2" style="margin-top: 3rem;">
+                <div class="card">
+                    <h4>Who is Aestus Consulting for?</h4>
+                    <p>We specialize in biotech and pharma companies looking to transform their AI capabilities. Whether you're a startup or an established enterprise, if you're ready to move beyond surface-level AI use, we can help.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>What makes your approach different?</h4>
+                    <p>We focus on culture change, not just tool training. We believe the AI models are already good enough. What's missing is the human layer. Our "Give, Teach, Build" methodology delivers immediate value while building lasting capability.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>How long does a typical engagement last?</h4>
+                    <p>It depends on your goals. A CEO "Art of the Possible" session is 90 minutes. Team training programs typically span several weeks. Ongoing partnerships can last months or years as we help you scale.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Do you work with companies that already have AI tools?</h4>
+                    <p>Absolutely. Many of our clients have Copilot, ChatGPT Enterprise, or other tools but aren't getting the value they expected. We help you maximize your existing investments before recommending new ones.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>What's the first step?</h4>
+                    <p>Take our AI Quick Check survey above, or email us directly. We'll schedule a brief call to understand your situation and recommend the best path forward.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Is my data safe with you?</h4>
+                    <p>Yes. We take data security seriously, especially in regulated industries like biotech and pharma. We can work within your existing security frameworks and never require access to sensitive data to deliver value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>The Tide Is Rising</h2>
+            <p class="lead" style="color: rgba(255, 255, 255, 0.95);">Every day you wait is a day your competition gets further ahead. Let's start your transformation today.</p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="mailto:contact@aestusconsulting.com" class="btn btn-secondary">Email Us Now</a>
+                <a href="#survey" class="btn btn-primary">Take the Survey →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                    <p>Preparing biotech and pharma companies to ride the AI transformation wave to 10x productivity gains.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
+                        <li><a href="methodology.html">Methodology</a></li>
+                        <li><a href="portal.html">Client Portal</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                        <li><a href="contact.html">Book a Strategy Session</a></li>
+                        <li><a href="contact.html#survey">Take AI Quick Check</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards and sections for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.card, .contact-item');
+            animatedElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+        });
+
+        // Check for hash on page load to scroll to survey
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash === '#survey') {
+                setTimeout(() => {
+                    const surveySection = document.getElementById('survey');
+                    if (surveySection) {
+                        surveySection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>

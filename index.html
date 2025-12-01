@@ -7,843 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0066CC;
-            --primary-dark: #004499;
-            --secondary: #00B4D8;
-            --accent: #90E0EF;
-            --dark: #03045E;
-            --gray-900: #0A0E27;
-            --gray-800: #1A1F36;
-            --gray-700: #2D3748;
-            --gray-600: #4A5568;
-            --gray-500: #718096;
-            --gray-400: #A0AEC0;
-            --gray-300: #CBD5E0;
-            --gray-200: #E2E8F0;
-            --gray-100: #F7FAFC;
-            --white: #FFFFFF;
-            --gradient-1: linear-gradient(135deg, #0066CC 0%, #00B4D8 100%);
-            --gradient-2: linear-gradient(135deg, #004499 0%, #0066CC 100%);
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
-            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--gray-700);
-            background: var(--white);
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Typography */
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            color: var(--gray-900);
-            margin-bottom: 1.5rem;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--gray-900);
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 600;
-            line-height: 1.3;
-            color: var(--gray-900);
-            margin-bottom: 1rem;
-        }
-
-        .lead {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .nav-logo {
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-        
-        .nav-logo:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--gray-700);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-            background: rgba(0, 102, 204, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-1);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        
-        .nav-links a:hover::after {
-            width: 80%;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, #F7FAFC 0%, #E0F4FF 50%, #B8E6FF 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -25%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-logo {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .hero-logo-img {
-            height: 200px;
-            max-width: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 20px rgba(0, 102, 204, 0.3));
-            transition: transform 0.3s ease;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .hero-logo-img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background: var(--gradient-1);
-            color: var(--white);
-            padding: 0.5rem 1.5rem;
-            border-radius: 30px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: var(--gradient-1);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--gray-700);
-            border: 2px solid var(--gray-200);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background: var(--gray-50);
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        /* Cards */
-        .card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-1);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.15);
-        }
-        
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-        }
-        
-        .card:hover .card-icon {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
-        }
-
-        .card h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--gray-900);
-        }
-
-        .problem-card h4 {
-            color: var(--primary-dark);
-            font-weight: 700;
-        }
-
-        .card p {
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        /* Grid Layouts */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-dark {
-            background: var(--gray-900);
-            color: var(--gray-100);
-        }
-
-        .section-dark h2,
-        .section-dark h3 {
-            color: var(--white);
-        }
-
-        .section-gray {
-            background: var(--gray-100);
-        }
-
-        /* Problem Cards */
-        .problem-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-1);
-        }
-
-        .problem-card:hover {
-            transform: translateX(8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .problem-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--gray-200);
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-        }
-
-        .problem-label {
-            display: inline-block;
-            background: var(--gray-100);
-            color: var(--gray-700);
-            padding: 0.25rem 1rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-        }
-
-        /* Comparison Table */
-        .comparison-table {
-            width: 100%;
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            margin-top: 3rem;
-        }
-
-        .comparison-table thead {
-            background: var(--gradient-1);
-            color: var(--white);
-        }
-
-        .comparison-table th {
-            padding: 1.5rem;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .comparison-table td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background: var(--gray-50);
-        }
-
-        /* Process Steps */
-        .process-step {
-            text-align: left;
-            padding: 2rem;
-        }
-        
-        .process-step h4,
-        .process-step h5 {
-            text-align: center;
-        }
-
-        .process-step h4 {
-            font-size: 1.75rem;
-        }
-
-        .process-step h5 {
-            font-size: 1.25rem;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-1);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* Transition Sections */
-        .transition-section {
-            text-align: center;
-            margin: 4rem 0;
-            padding: 3rem 2rem;
-            background: var(--gradient-1);
-            border-radius: 20px;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .transition-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .transition-section h3 {
-            color: var(--white);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .transition-section .lead {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Offer Cards */
-        .offer-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .offer-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
-            transform: translate(50%, -50%);
-        }
-
-        .offer-badge {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--gradient-1);
-            color: var(--white);
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .cta-section h2 {
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .cta-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .cta-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 248, 255, 0.8) 100%);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: left;
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
-        }
-
-        .cta-card h3 {
-            color: var(--gray-900);
-            margin-bottom: 1rem;
-        }
-
-        .cta-card p {
-            color: var(--gray-700);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--gray-900);
-            color: var(--gray-400);
-            padding: 60px 0 40px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo {
-            height: 60px;
-            margin-bottom: 1.5rem;
-            filter: drop-shadow(0 8px 25px rgba(0, 102, 204, 0.4)) drop-shadow(0 4px 15px rgba(0, 180, 216, 0.3));
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateY(0);
-        }
-
-        .footer-logo:hover {
-            transform: translateY(-5px) scale(1.05);
-            filter: drop-shadow(0 12px 35px rgba(0, 102, 204, 0.5)) drop-shadow(0 6px 20px rgba(0, 180, 216, 0.4));
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-links a {
-            color: var(--gray-400);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid var(--gray-800);
-            font-size: 0.875rem;
-        }
-
-        /* Mobile Navigation */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--gray-700);
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .mobile-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid var(--gray-200);
-            padding: 1rem 0;
-        }
-
-        .mobile-nav.active {
-            display: block;
-        }
-
-        .mobile-nav a {
-            display: block;
-            padding: 1rem 2rem;
-            color: var(--gray-700);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-nav a:hover {
-            background: rgba(0, 102, 204, 0.1);
-            color: var(--primary);
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 20px;
-            }
-            
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .hero {
-                padding: 100px 0 60px;
-                text-align: center;
-            }
-            
-            .hero-logo-img {
-                height: 240px;
-            }
-            
-            .hero h1 {
-                font-size: clamp(2rem, 8vw, 3rem);
-            }
-            
-            .btn-group {
-                flex-direction: column;
-                width: 100%;
-                gap: 1rem;
-            }
-            
-            .btn {
-                width: 100%;
-                justify-content: center;
-                padding: 1.25rem 2rem;
-                font-size: 1rem;
-            }
-            
-            .grid-3, .grid-4 {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .card {
-                padding: 2rem;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-            
-            .comparison-table {
-                overflow-x: auto;
-            }
-            
-            .comparison-table th,
-            .comparison-table td {
-                padding: 1rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-            
-            .hero {
-                padding: 80px 0 40px;
-            }
-            
-            .card {
-                padding: 1.5rem;
-            }
-            
-            .btn {
-                padding: 1rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .nav-logo {
-                height: 40px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
-            <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            <a href="index.html">
+                <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
             <ul class="nav-links">
-                <li><a href="#problem">The Problem</a></li>
-                <li><a href="#solution">Our Solution</a></li>
-                <li><a href="#offerings">Services</a></li>
-                <li><a href="#contact">Get Started</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="portal.html">Client Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         </div>
         <div class="mobile-nav" id="mobileNav">
-            <a href="#problem" onclick="closeMobileMenu()">The Problem</a>
-            <a href="#solution" onclick="closeMobileMenu()">Our Solution</a>
-            <a href="#offerings" onclick="closeMobileMenu()">Services</a>
-            <a href="#contact" onclick="closeMobileMenu()">Get Started</a>
+            <a href="index.html">Home</a>
+            <a href="philosophy.html">Philosophy</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="portal.html">Client Portal</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
@@ -855,11 +42,11 @@
             </div>
             <div class="hero-tag">The Aestus Vision</div>
             <h1>The AI tide is rising.<br>Is your ship seaworthy?</h1>
-            <p class="lead"><strong>Aestus means "tide" in Latin.</strong> Like the ocean's powerful and relentless rhythm, AI transformation is inevitable. The tide doesn't care if you're ready… it simply rises. Only prepared vessels will be lifted by its power. The unprepared will be swept away by the flood.</p>
-            <p class="lead"><strong>Our mission:</strong> We prepare biotech and pharma companies to ride this wave to 10x - 100x productivity gains. Starting with leadership, we build an AI-first culture where every team member knows how to harness AI as a force multiplier—not just another tool to ignore.</p>
+            <p class="lead"><strong>Aestus means "tide" in Latin.</strong> Like the ocean's powerful and relentless rhythm, AI transformation is inevitable. The tide doesn't care if you're ready... it simply rises. Only prepared vessels will be lifted by its power. The unprepared will be swept away by the flood.</p>
+            <p class="lead"><strong>Our mission:</strong> We prepare biotech and pharma companies to ride this wave to 10x - 100x productivity gains. Starting with leadership, we build an AI-first culture where every team member knows how to harness AI as a force multiplier, not just another tool to ignore.</p>
             <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">Chart Your Course: Book a CEO Strategy Session</a>
-                <a href="#assessment" class="btn btn-secondary">Take the 5-Minute "AI-Ready" Assessment →</a>
+                <a href="contact.html" class="btn btn-primary">Chart Your Course: Book a CEO Strategy Session</a>
+                <a href="contact.html#survey" class="btn btn-secondary">Take the AI Quick Check Survey →</a>
             </div>
         </div>
     </section>
@@ -867,7 +54,7 @@
     <!-- Three Truths -->
     <section>
         <div class="container">
-            <h2 style="text-align: center;">The Rising Tide: <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Three Truths</span></h2>
+            <h2 style="text-align: center;">The Rising Tide: <span class="gradient-text">Three Truths</span></h2>
             <p class="lead" style="text-align: center;">A clear-eyed view of the challenge ahead.</p>
             <div class="grid-3">
                 <div class="card">
@@ -878,7 +65,7 @@
                 <div class="card">
                     <div class="card-icon">02</div>
                     <h4>It Lifts Only Seaworthy Ships</h4>
-                    <p>A rising tide lifts all boats, but only if they're built to float. Without robust processes, a trained crew, and a clear navigation system, AI will swamp your organization in "workslop" and wasted effort.</p>
+                    <p>A rising tide lifts all boats, but only if they're built to float. Without robust processes, a trained crew, and a clear navigation system, AI will swamp your organization in wasted effort.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">03</div>
@@ -892,102 +79,76 @@
     <!-- Two Paths -->
     <section class="section-gray">
         <div class="container">
-            <h2 style="text-align: center;">Your AI Journey: <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Two Paths, One Destination</span></h2>
+            <h2 style="text-align: center;">Your AI Journey: <span class="gradient-text">Two Paths, One Destination</span></h2>
             <p class="lead" style="text-align: center;">We meet you exactly where you are. Your goal is our destination: turning AI potential into a tangible competitive advantage.</p>
             <div class="grid-2">
                 <div class="offer-card">
                     <span class="offer-badge">PATH 1</span>
                     <h3>Build Your Own Lighthouse</h3>
                     <p>For companies needing a secure, proprietary AI environment. We partner with you to implement a system you own and control.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                            A secure, branded AI environment that protects your proprietary data.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                            Custom workflows & assistants tailored to your unique R&D, legal, and operational needs.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                            Complete ownership and enterprise-grade security for total peace of mind.
-                        </li>
+                    <ul class="feature-list">
+                        <li>A secure, branded AI environment that protects your proprietary data.</li>
+                        <li>Custom workflows & assistants tailored to your unique R&D, legal, and operational needs.</li>
+                        <li>Complete ownership and enterprise-grade security for total peace of mind.</li>
                     </ul>
                 </div>
                 <div class="offer-card">
                     <span class="offer-badge">PATH 2</span>
                     <h3>Navigate With Your Current Tools</h3>
                     <p>For companies looking to maximize their existing AI investments (like Copilot or ChatGPT Enterprise).</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                            Transform underused licenses into powerful engines for daily productivity.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                            Role-specific training that moves teams from occasional use to expert-level adoption.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                            Create sharable systems and context packs that scale wins across the entire organization.
-                        </li>
+                    <ul class="feature-list">
+                        <li>Transform underused licenses into powerful engines for daily productivity.</li>
+                        <li>Role-specific training that moves teams from occasional use to expert-level adoption.</li>
+                        <li>Create sharable systems and context packs that scale wins across the entire organization.</li>
                     </ul>
                 </div>
             </div>
             <div class="transition-section">
                 <h3>The Aestus Difference</h3>
-                <p class="lead">We don't just throw you a life preserver—we teach you to swim while we build your boat. Our approach is grounded in actionable insights, working systems, and immediate value at every step.</p>
+                <p class="lead">We don't just throw you a life preserver... we teach you to swim while we build your boat. Our approach is grounded in actionable insights, working systems, and immediate value at every step.</p>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <!-- What's Holding Companies Back -->
     <section id="problem">
         <div class="container">
-            <h2>The AI Paradox: <em style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-style: italic;">"I don't have time to learn the tool that's supposed to save me time"</em></h2>
-            <p class="lead">This is the highest-level barrier to AI adoption. Most companies are stuck because employees—from the C-suite down—tried AI once, got a mediocre result, and concluded the effort wasn't worth the time. We help organizations break this cycle.</p>
+            <h2 style="text-align: center;">What's Holding <span class="gradient-text">Companies Back</span></h2>
+            <p class="lead" style="text-align: center; max-width: 900px; margin: 0 auto;">The AI models are already good enough to transform your business. What's missing is the human layer... the knowledge, incentives, and culture to use them effectively.</p>
             
-            <h3 style="margin-top: 3rem; margin-bottom: 2rem;">The Four Hurdles Blocking Your Productivity:</h3>
-            <div class="grid-4">
+            <div class="grid-4" style="margin-top: 3rem;">
                 <div class="problem-card">
                     <div class="problem-number">1</div>
                     <span class="problem-label">The Skeptic</span>
                     <h4>No Buy-In, No Value Seen</h4>
-                    <p style="margin-top: 1rem;"><strong>The Problem:</strong> Leaders and key employees have seen disappointing, generic AI outputs and have no belief in the technology's potential for their specific roles.</p>
-                    <p><strong>Aestus's Role:</strong> We provide immediate, role-specific "wow" demonstrations that prove what is possible, securing top-down buy-in and establishing the mindset shift required for success.</p>
+                    <p style="margin-top: 1rem;">Leaders tried AI once, got mediocre results, and dismissed it. They never saw what's truly possible with proper context engineering.</p>
                 </div>
                 
                 <div class="problem-card">
                     <div class="problem-number">2</div>
                     <span class="problem-label">The Overwhelmed</span>
-                    <h4>Surface-Level Use & Churn</h4>
-                    <p style="margin-top: 1rem;"><strong>The Problem:</strong> Employees are open to AI but lack the training to move past basic prompting. They focus on task completion (inputs) rather than strategic goal achievement (outputs).</p>
-                    <p><strong>Result:</strong> They generate "workslop": AI-created content that looks professional but lacks substance, increasing churn and wasting the time of others who have to clean up the mess.</p>
-                    <p><strong>Aestus's Role:</strong> We teach the fundamentals of context engineering and iterative refinement, transforming surface-level use into deep, outcome-driven productivity that eliminates churn.</p>
+                    <h4>Surface-Level Use</h4>
+                    <p style="margin-top: 1rem;">Employees lack training to move past basic prompting. They're stuck at surface-level use that creates more work, not less.</p>
                 </div>
                 
                 <div class="problem-card">
                     <div class="problem-number">3</div>
                     <span class="problem-label">The Misdirected</span>
-                    <h4>Busy Work and Broken Incentives</h4>
-                    <p style="margin-top: 1rem;"><strong>The Problem:</strong> Organizational incentives measure activity, not efficiency. AI is used to quickly generate "proof of work," amplifying busy work and "work theater" instead of focusing teams on mission-critical objectives.</p>
-                    <p><strong>Result:</strong> AI increases the volume of low-value output, not the quality of high-value insight.</p>
-                    <p><strong>Aestus's Role:</strong> We provide the frameworks to establish an AI-first culture that rewards efficiency and strategic output, driving your team to focus on what truly matters.</p>
+                    <h4>Broken Incentives</h4>
+                    <p style="margin-top: 1rem;">Organizational incentives measure activity, not efficiency. AI amplifies busy work instead of focusing teams on what truly matters.</p>
                 </div>
                 
                 <div class="problem-card">
                     <div class="problem-number">4</div>
                     <span class="problem-label">The Hidden Asset</span>
-                    <h4>The Shadow AI Epidemic</h4>
-                    <p style="margin-top: 1rem;"><strong>The Problem:</strong> Your most effective AI users are hiding their 10x productivity gains. They fear policy violations, using personal accounts, or being assigned more work if their efficiency is revealed.</p>
-                    <p><strong>Result:</strong> Best practices are siloed, institutional knowledge is lost, and the organization is exposed to data risk.</p>
-                    <p><strong>Aestus's Role:</strong> We provide a secure framework and clear strategy to bring these experts into the light, allowing them to share best practices and build company-wide systems that scale their success.</p>
+                    <h4>Shadow AI Users</h4>
+                    <p style="margin-top: 1rem;">Your best AI users hide their 10x productivity gains. They fear policy violations or being assigned more work if their efficiency is revealed.</p>
                 </div>
             </div>
             
-            <div class="transition-section">
-                <h3>The Core Truth:</h3>
-                <p class="lead">This isn't an AI problem. It's a human and organizational problem. The AI models are already good enough to transform your business. What's missing is the human layer—the knowledge, incentives, and culture to use them effectively. We provide the expertise to turn AI potential into daily reality, whether you need a secure, company-specific AI platform or want to maximize your existing tools.</p>
+            <div class="transition-section" style="margin-top: 4rem;">
+                <h3>The Core Truth</h3>
+                <p class="lead">This isn't an AI problem. It's a human and organizational problem. We provide the expertise to turn AI potential into daily reality.</p>
             </div>
         </div>
     </section>
@@ -995,39 +156,37 @@
     <!-- Solution Section -->
     <section id="solution" class="section-gray">
         <div class="container">
-            <h2>The Aestus Way: <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Transforming Chaos into Competitive Advantage</span></h2>
-            <p class="lead">We don't just teach you to use a chatbot. We change the way your organization thinks, works, and collaborates with AI. We close the Strategy, Skill, and Trust Gaps to unlock value from your hidden AI economy.</p>
-            
-            <h3 style="text-align: center; margin-top: 3rem; font-size: 2.25rem;">The Aestus Methodology: Give, Teach, Build</h3>
-            <p style="text-align: center; color: var(--gray-600);">Our process is designed for immediate impact and long-term sustainability, moving your organization from zero adoption to AI mastery.</p>
+            <h2 style="text-align: center;">The Aestus Way: <span class="gradient-text">Give, Teach, Build</span></h2>
+            <p class="lead" style="text-align: center;">Our process is designed for immediate impact and long-term sustainability.</p>
             
             <div class="grid-3" style="margin-top: 3rem;">
-                <div class="process-step">
+                <div class="card process-step">
                     <div class="step-number">1</div>
                     <h4>Give the Fish</h4>
-                    <h5 style="color: var(--primary); margin-bottom: 1rem;">Immediate, Demonstrable Value</h5>
-                    <p><strong>What it is:</strong> We start with high-impact, role-specific demonstrations and working prototypes that secure executive buy-in and generate immediate excitement.</p>
-                    <p><strong>Example:</strong> A 2-hour CEO "Wow" Session that uses advanced AI to solve a current, critical R&D or operational problem—proving the ROI potential instantly.</p>
-                    <p><strong>Outcome:</strong> Eliminates skepticism (Problem 1) and shows leaders what is truly possible.</p>
+                    <h5 style="color: var(--primary); margin-bottom: 1rem;">Immediate Value</h5>
+                    <p>We start with high-impact, role-specific demonstrations that secure executive buy-in and generate immediate excitement.</p>
+                    <p><strong>Example:</strong> A 90-minute CEO "Wow" Session that uses advanced AI to solve a current, critical problem... proving the ROI potential instantly.</p>
                 </div>
                 
-                <div class="process-step">
+                <div class="card process-step">
                     <div class="step-number">2</div>
                     <h4>Teach to Fish</h4>
-                    <h5 style="color: var(--primary); margin-bottom: 1rem;">Mastery-Focused Training</h5>
-                    <p><strong>What it is:</strong> A structured curriculum focused on creating AI managers, not button-pushers. We teach deep reasoning, context engineering, and iteration skills.</p>
-                    <p><strong>Focus:</strong> Shifting the mindset from accepting the first output to editing and refining the 10th. We turn your Overwhelmed users (Problem 2) into experts.</p>
-                    <p><strong>Outcome:</strong> Eliminates "Workslop" and transforms surface-level use into substantive, outcome-driven work.</p>
+                    <h5 style="color: var(--primary); margin-bottom: 1rem;">Mastery Training</h5>
+                    <p>A structured curriculum focused on creating AI managers, not button-pushers. We teach deep reasoning, context engineering, and iteration skills.</p>
+                    <p><strong>Focus:</strong> Shifting the mindset from accepting the first output to editing and refining the 10th.</p>
                 </div>
                 
-                <div class="process-step">
+                <div class="card process-step">
                     <div class="step-number">3</div>
-                    <h4>Build Your Safe Harbor</h4>
-                    <h5 style="color: var(--primary); margin-bottom: 1rem;">Scaling and Security</h5>
-                    <p><strong>What it is:</strong> We establish the secure frameworks, policies, and systems needed to scale AI excellence across the company.</p>
-                    <p><strong>Focus:</strong> Creating a safe environment where your Hidden Asset users (Problem 4) can share their expertise without fear, building institutional knowledge and best practices.</p>
+                    <h4>Build Safe Harbor</h4>
+                    <h5 style="color: var(--primary); margin-bottom: 1rem;">Scale & Sustain</h5>
+                    <p>We establish the secure frameworks, policies, and systems needed to scale AI excellence across the company.</p>
                     <p><strong>Outcome:</strong> Transforms individual AI mastery into organizational capability, creating a sustainable competitive advantage.</p>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="methodology.html" class="btn btn-primary">Explore Our Full Methodology →</a>
             </div>
         </div>
     </section>
@@ -1036,17 +195,17 @@
     <section id="contact" class="cta-section">
         <div class="container">
             <h2>Ready to Ride the AI Tide?</h2>
-            <p class="lead" style="color: rgba(255, 255, 255, 0.95);">Don't let your competition sail ahead while you're still debating the weather. The tide is rising—will you be ready?</p>
+            <p class="lead" style="color: rgba(255, 255, 255, 0.95);">Don't let your competition sail ahead while you're still debating the weather. The tide is rising... will you be ready?</p>
             <div class="cta-cards">
                 <div class="cta-card">
                     <h3>Book Your Strategy Session</h3>
-                    <p>Get a personalized 60-minute CEO strategy session where we'll assess your current AI readiness and chart your path to 10x productivity gains.</p>
-                    <a href="mailto:info@aestusconsulting.com" class="btn btn-primary">Schedule Your Session</a>
+                    <p>Get a personalized 90-minute CEO strategy session where we'll assess your current AI readiness and chart your path to 10x productivity gains.</p>
+                    <a href="contact.html" class="btn btn-primary">Schedule Your Session</a>
                 </div>
                 <div class="cta-card">
-                    <h3>Take the AI-Ready Assessment</h3>
-                    <p>Discover exactly where your organization stands on the AI transformation journey with our comprehensive 5-minute assessment.</p>
-                    <a href="#assessment" class="btn btn-primary">Start Assessment</a>
+                    <h3>Take the AI Quick Check</h3>
+                    <p>Discover exactly where your organization stands on the AI transformation journey with our comprehensive survey.</p>
+                    <a href="contact.html#survey" class="btn btn-primary">Start Survey</a>
                 </div>
             </div>
         </div>
@@ -1061,20 +220,20 @@
                     <p>Preparing biotech and pharma companies to ride the AI transformation wave to 10x - 100x productivity gains.</p>
                 </div>
                 <div>
-                    <h4>Services</h4>
+                    <h4>Explore</h4>
                     <ul class="footer-links">
-                        <li><a href="#solution">AI Strategy</a></li>
-                        <li><a href="#solution">Team Training</a></li>
-                        <li><a href="#solution">Custom AI Platforms</a></li>
-                        <li><a href="#solution">Implementation</a></li>
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
+                        <li><a href="methodology.html">Methodology</a></li>
+                        <li><a href="portal.html">Client Portal</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:info@aestusconsulting.com">info@aestusconsulting.com</a></li>
-                        <li><a href="#contact">Book a Strategy Session</a></li>
-                        <li><a href="#assessment">Take Assessment</a></li>
+                        <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                        <li><a href="contact.html">Book a Strategy Session</a></li>
+                        <li><a href="contact.html#survey">Take AI Quick Check</a></li>
                     </ul>
                 </div>
             </div>
@@ -1095,6 +254,11 @@
             const mobileNav = document.getElementById('mobileNav');
             mobileNav.classList.remove('active');
         }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

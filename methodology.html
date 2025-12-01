@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Methodology | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+                <li><a href="methodology.html" class="active">Methodology</a></li>
+                <li><a href="portal.html">Client Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="philosophy.html">Philosophy</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="portal.html">Client Portal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>The Aestus <span class="gradient-text">Methodology</span></h1>
+            <p class="lead">A proven framework for transforming AI skeptics into AI champions, one stage at a time.</p>
+        </div>
+    </section>
+
+    <!-- Operating Framework Overview -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">The Aestus <span class="gradient-text">Operating Framework</span></h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">Our comprehensive approach to AI transformation, designed for sustainable organizational change.</p>
+            
+            <div class="infographic-container small">
+                <img src="assets/images/Aestus Operating Framework Infographic.png" alt="Aestus Operating Framework - Complete overview of our AI transformation methodology" onclick="openLightbox(this.src)">
+                <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 1rem;">Click image to enlarge</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Give, Teach, Build -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 style="text-align: center;">Give → Teach → <span class="gradient-text">Build</span></h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Our three-phase approach ensures immediate value while building lasting capability.</p>
+            
+            <div class="grid-3">
+                <div class="card process-step">
+                    <div class="step-number">1</div>
+                    <h4>Give the Fish</h4>
+                    <h5 style="color: var(--primary); margin-bottom: 1rem;">(Wow Moments)</h5>
+                    <p><strong>Goal:</strong> Eliminate skepticism. Create the "a-ha" moment. Secure buy-in.</p>
+                    <p><strong>What We Do:</strong> High-impact demos using your own company data. Show what's possible before asking anyone to do anything.</p>
+                    <p><strong>Deliverables:</strong></p>
+                    <ul class="feature-list">
+                        <li>Live demonstrations (Personal Profiler, Company Profiler)</li>
+                        <li>Proof that AI understands your business</li>
+                        <li>Excitement, not homework</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Typical:</strong> CEO "Art of the Possible" Session (90 minutes)</p>
+                </div>
+                
+                <div class="card process-step">
+                    <div class="step-number">2</div>
+                    <h4>Teach to Fish</h4>
+                    <h5 style="color: var(--primary); margin-bottom: 1rem;">(Mastery Training)</h5>
+                    <p><strong>Goal:</strong> Transform surface-level users into confident AI practitioners.</p>
+                    <p><strong>What We Do:</strong> Train them to do it themselves. Focus on frameworks, not just tools.</p>
+                    <p><strong>Core Content:</strong></p>
+                    <ul class="feature-list">
+                        <li>The Simple Pattern (Context Engineering)</li>
+                        <li>The Iteration Imperative</li>
+                        <li>The Intern Analogy</li>
+                        <li>Use Case Prioritization</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Typical:</strong> Follow-up sessions, practice coaching, team workshops</p>
+                </div>
+                
+                <div class="card process-step">
+                    <div class="step-number">3</div>
+                    <h4>Build Safe Harbor</h4>
+                    <h5 style="color: var(--primary); margin-bottom: 1rem;">(Scale & Sustain)</h5>
+                    <p><strong>Goal:</strong> Transform individual wins into organizational capability.</p>
+                    <p><strong>What We Do:</strong> Help build systems that last... shared resources, governance, custom solutions.</p>
+                    <p><strong>Deliverables (Progressive):</strong></p>
+                    <ul class="feature-list">
+                        <li>Internal prompt library / knowledge hub</li>
+                        <li>Governance guidelines</li>
+                        <li>Custom agents for specific workflows</li>
+                        <li>(Later) Advanced integrations</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Typical:</strong> Ongoing relationship, department rollouts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Journey -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">The Client <span class="gradient-text">Journey</span></h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">From skeptic to AI-first: a realistic progression through six stages of transformation.</p>
+            
+            <div class="infographic-container small">
+                <img src="assets/images/Client AI Adoption Framework Infographic.png" alt="Client Journey Stages - From Skeptic to AI-First" onclick="openLightbox(this.src)">
+                <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 1rem;">Click image to enlarge</p>
+            </div>
+            
+            <div class="grid-3" style="margin-top: 3rem;">
+                <div class="journey-card">
+                    <span class="journey-stage">Stage 0</span>
+                    <h4>Pre-Awareness</h4>
+                    <p><strong>Profile:</strong> Haven't really tried AI, or tried once and gave up</p>
+                    <p><strong>Mindset:</strong> Skeptical, overwhelmed, or dismissive</p>
+                    <p><strong>Need:</strong> A "wow" moment proving relevance to their work</p>
+                </div>
+                
+                <div class="journey-card">
+                    <span class="journey-stage">Stage 1</span>
+                    <h4>Curious & Practicing</h4>
+                    <p><strong>Profile:</strong> Sees value, starting to use AI personally</p>
+                    <p><strong>Mindset:</strong> "This could work for me"</p>
+                    <p><strong>Need:</strong> Frameworks, practice, confidence</p>
+                </div>
+                
+                <div class="journey-card">
+                    <span class="journey-stage">Stage 2</span>
+                    <h4>Building Confidence</h4>
+                    <p><strong>Profile:</strong> Using AI regularly, seeing results</p>
+                    <p><strong>Mindset:</strong> "How do I get better? How do I share this?"</p>
+                    <p><strong>Need:</strong> Advanced techniques, peer learning</p>
+                </div>
+                
+                <div class="journey-card">
+                    <span class="journey-stage">Stage 3</span>
+                    <h4>Spreading to Team</h4>
+                    <p><strong>Profile:</strong> Leader wants to scale wins across department</p>
+                    <p><strong>Mindset:</strong> "How do we get everyone doing this?"</p>
+                    <p><strong>Need:</strong> Role-specific training, shared resources</p>
+                </div>
+                
+                <div class="journey-card">
+                    <span class="journey-stage">Stage 4</span>
+                    <h4>Systematizing</h4>
+                    <p><strong>Profile:</strong> AI becoming part of how the org works</p>
+                    <p><strong>Mindset:</strong> "How do we make this sustainable?"</p>
+                    <p><strong>Need:</strong> Governance frameworks, custom solutions</p>
+                </div>
+                
+                <div class="journey-card">
+                    <span class="journey-stage">Stage 5</span>
+                    <h4>Advanced Integration</h4>
+                    <p><strong>Profile:</strong> AI embedded, ready for next level</p>
+                    <p><strong>Mindset:</strong> "What else is possible?"</p>
+                    <p><strong>Need:</strong> Technical integrations, automation at scale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHANGE Framework Preview -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 style="text-align: center;">The CHANGE <span class="gradient-text">Framework</span></h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">Before any training succeeds, the organization needs cultural readiness. We assess and build this through six dimensions.</p>
+            
+            <div class="infographic-container small">
+                <img src="assets/images/CHANGE Framework Infographic.png" alt="The CHANGE Framework - Building AI-Ready Culture" onclick="openLightbox(this.src)">
+                <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 1rem;">Click image to enlarge</p>
+            </div>
+            
+            <!-- Deduplicated Content: Text removed as it is covered in the infographic -->
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 1.5rem;">Detailed framework materials, assessments, and implementation guides are available in the Client Portal.</p>
+                <a href="portal.html" class="btn btn-primary">Access Client Portal →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">What We <span class="gradient-text">Offer</span></h2>
+            <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Engagement options designed to meet you wherever you are on your AI journey.</p>
+            
+            <div class="grid-2">
+                <div class="offer-card">
+                    <span class="offer-badge">ENTRY</span>
+                    <h3>CEO AI Enablement Session</h3>
+                    <p>For Stage 0-1 clients ready to see what's possible.</p>
+                    <ul class="feature-list">
+                        <li>90-minute "Art of the Possible" session</li>
+                        <li>Pre-session survey to customize</li>
+                        <li>Live demos using your company</li>
+                        <li>Framework introduction</li>
+                        <li>Starter agent pack</li>
+                        <li>90-day roadmap discussion</li>
+                    </ul>
+                </div>
+                
+                <div class="offer-card">
+                    <span class="offer-badge">FOUNDATION</span>
+                    <h3>Leadership & Team Training</h3>
+                    <p>For Stage 1-3 clients building organizational capability.</p>
+                    <ul class="feature-list">
+                        <li>Multiple sessions over weeks</li>
+                        <li>Hands-on practice (not lectures)</li>
+                        <li>Role-specific applications</li>
+                        <li>CHANGE culture assessment</li>
+                        <li>Internal champions identification</li>
+                        <li>Shared resource setup</li>
+                    </ul>
+                </div>
+                
+                <div class="offer-card">
+                    <span class="offer-badge">GROWTH</span>
+                    <h3>Scaling & Custom Solutions</h3>
+                    <p>For Stage 3-4 clients ready to systematize.</p>
+                    <ul class="feature-list">
+                        <li>Department-wide rollouts</li>
+                        <li>Custom agent development</li>
+                        <li>Workflow optimization</li>
+                        <li>Governance framework development</li>
+                        <li>Ongoing coaching/office hours</li>
+                    </ul>
+                </div>
+                
+                <div class="offer-card">
+                    <span class="offer-badge">ADVANCED</span>
+                    <h3>Technical Integration</h3>
+                    <p>For Stage 5 clients (rare, way down the road).</p>
+                    <ul class="feature-list">
+                        <li>MCP integrations</li>
+                        <li>Database connections</li>
+                        <li>Multi-agent orchestration</li>
+                        <li>Custom technical builds</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p class="lead" style="color: rgba(255, 255, 255, 0.95);">Every transformation starts with a single conversation.</p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="contact.html" class="btn btn-secondary">Book a Strategy Session</a>
+                <a href="contact.html#survey" class="btn btn-primary">Take the AI Quick Check →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for infographics -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Enlarged infographic" id="lightbox-img">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                    <p>Preparing biotech and pharma companies to ride the AI transformation wave to 10x productivity gains.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
+                        <li><a href="methodology.html">Methodology</a></li>
+                        <li><a href="portal.html">Client Portal</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                        <li><a href="contact.html">Book a Strategy Session</a></li>
+                        <li><a href="contact.html#survey">Take AI Quick Check</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards and sections for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.card, .journey-card, .offer-card, .framework-item');
+            animatedElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+        });
+
+        // Lightbox functions
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

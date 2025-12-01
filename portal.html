@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Password Gate -->
+    <div class="password-gate" id="passwordGate">
+        <div class="password-box">
+            <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" style="height: 80px; margin-bottom: 1.5rem;">
+            <h2>Client Portal</h2>
+            <p>Enter your access code to view exclusive training materials and frameworks.</p>
+            <input type="password" class="password-input" id="passwordInput" placeholder="Enter access code..." onkeypress="handleKeyPress(event)">
+            <p class="password-error" id="passwordError">Incorrect access code. Please try again.</p>
+            <button class="btn btn-primary" style="width: 100%;" onclick="checkPassword()">Access Portal</button>
+            <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--gray-500);">Don't have an access code? <a href="contact.html" style="color: var(--primary);">Contact us</a> to become a client.</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="portal.html" class="active">Client Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="philosophy.html">Philosophy</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="portal.html">Client Portal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Portal Content (Hidden until password verified) -->
+    <div class="portal-content" id="portalContent">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Client <span class="gradient-text">Portal</span></h1>
+                <p class="lead">Welcome back. Access your exclusive training materials, frameworks, and resources below.</p>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <div class="grid-4">
+                    <a href="#change-framework" class="card" style="text-decoration: none; text-align: center;">
+                        <div class="card-icon">1</div>
+                        <h4>CHANGE Framework</h4>
+                        <p>Culture readiness assessment</p>
+                    </a>
+                    <a href="#priority-matrix" class="card" style="text-decoration: none; text-align: center;">
+                        <div class="card-icon">2</div>
+                        <h4>Priority Matrix</h4>
+                        <p>Use case prioritization</p>
+                    </a>
+                    <a href="#primitives" class="card" style="text-decoration: none; text-align: center;">
+                        <div class="card-icon">3</div>
+                        <h4>6 Primitives</h4>
+                        <p>Core AI capabilities</p>
+                    </a>
+                    <a href="#context-engineering" class="card" style="text-decoration: none; text-align: center;">
+                        <div class="card-icon">4</div>
+                        <h4>Context Engineering</h4>
+                        <p>The Simple Pattern</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHANGE Framework Deep Dive -->
+        <section id="change-framework" class="section-gray">
+            <div class="container">
+                <h2 style="text-align: center;">The CHANGE <span class="gradient-text">Framework</span></h2>
+                <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">Building an AI-Ready Culture: Assess and develop these six dimensions before and during your AI transformation.</p>
+                
+                <div class="infographic-container small">
+                    <img src="assets/images/CHANGE Framework Infographic.png" alt="The CHANGE Framework - Building AI-Ready Culture" onclick="openLightbox(this.src)">
+                    <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 1rem;">Click image to enlarge</p>
+                </div>
+                
+                <h3 style="margin-top: 3rem; margin-bottom: 2rem;">Deep Dive: Each Dimension</h3>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span class="framework-letter">C</span>
+                            <h4 style="margin: 0;">Communication</h4>
+                        </div>
+                        <p><strong>What It Means:</strong> Transparent, consistent messaging about AI's role in the organization.</p>
+                        <p><strong>Key Questions:</strong></p>
+                        <ul class="feature-list">
+                            <li>Is leadership talking about AI openly?</li>
+                            <li>Do employees know what's expected of them?</li>
+                            <li>Is there a clear vision for AI's role?</li>
+                            <li>Are successes and learnings being shared?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span class="framework-letter">H</span>
+                            <h4 style="margin: 0;">Human Oversight</h4>
+                        </div>
+                        <p><strong>What It Means:</strong> Humans stay in the loop for critical decisions with clear review processes.</p>
+                        <p><strong>Key Questions:</strong></p>
+                        <ul class="feature-list">
+                            <li>Are there clear review processes?</li>
+                            <li>Do people know when to trust vs. verify?</li>
+                            <li>Who has final say on AI-assisted decisions?</li>
+                            <li>What's the escalation path for concerns?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span class="framework-letter">A</span>
+                            <h4 style="margin: 0;">Attitude</h4>
+                        </div>
+                        <p><strong>What It Means:</strong> Proactive, experimental mindset where failure is learning, not punishment.</p>
+                        <p><strong>Key Questions:</strong></p>
+                        <ul class="feature-list">
+                            <li>Is failure punished or treated as learning?</li>
+                            <li>Do people feel safe to experiment?</li>
+                            <li>Is there curiosity about AI possibilities?</li>
+                            <li>Are early adopters celebrated or side-eyed?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span class="framework-letter">N</span>
+                            <h4 style="margin: 0;">Network</h4>
+                        </div>
+                        <p><strong>What It Means:</strong> Champions and communities of practice sharing knowledge across teams.</p>
+                        <p><strong>Key Questions:</strong></p>
+                        <ul class="feature-list">
+                            <li>Are there internal AI advocates/champions?</li>
+                            <li>Is knowledge shared or siloed?</li>
+                            <li>Do teams collaborate on AI use cases?</li>
+                            <li>Is there a community of practice?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span class="framework-letter">G</span>
+                            <h4 style="margin: 0;">Governance</h4>
+                        </div>
+                        <p><strong>What It Means:</strong> Clear policies for AI use with risk management and compliance guidelines.</p>
+                        <p><strong>Key Questions:</strong></p>
+                        <ul class="feature-list">
+                            <li>Are there guidelines for AI use?</li>
+                            <li>Do people know what's allowed?</li>
+                            <li>How is sensitive data handled?</li>
+                            <li>What compliance requirements apply?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span class="framework-letter">E</span>
+                            <h4 style="margin: 0;">Enablement</h4>
+                        </div>
+                        <p><strong>What It Means:</strong> Tools, training, time, and resources to succeed with AI.</p>
+                        <p><strong>Key Questions:</strong></p>
+                        <ul class="feature-list">
+                            <li>Do people have access to AI tools?</li>
+                            <li>Is there dedicated learning time?</li>
+                            <li>Are training resources available?</li>
+                            <li>Is there budget for experimentation?</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="transition-section" style="margin-top: 3rem;">
+                    <h3>How to Use CHANGE</h3>
+                    <p class="lead"><strong>Diagnostic:</strong> Assess where you stand on each dimension. <strong>Roadmap:</strong> Identify which dimensions need work. <strong>Language:</strong> Use it as a common vocabulary for AI readiness discussions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Case Priority Matrix -->
+        <section id="priority-matrix">
+            <div class="container">
+                <h2 style="text-align: center;">Use Case <span class="gradient-text">Priority Matrix</span></h2>
+                <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">The key framework for deciding what to work on first. Plot use cases on two axes: Impact and Difficulty.</p>
+                
+                <div class="priority-matrix" style="max-width: 800px; margin: 3rem auto;">
+                    <div class="matrix-quadrant quick-wins">
+                        <p class="matrix-label">Low Difficulty, High Impact</p>
+                        <h4>Quick Wins</h4>
+                        <p><strong>Do First</strong> — Easy to implement, immediate value. This is where we start with every client.</p>
+                        <p><strong>Examples:</strong> Email drafting/editing, meeting prep, first-draft documents, research summaries, FAQ responses</p>
+                    </div>
+                    
+                    <div class="matrix-quadrant strategic-bets">
+                        <p class="matrix-label">High Difficulty, High Impact</p>
+                        <h4>Strategic Bets</h4>
+                        <p><strong>Do Later</strong> — Requires investment but transformational. Only after culture shift and foundational skills are solid.</p>
+                        <p><strong>Examples:</strong> Database integrations, custom agents with MCPs, multi-agent workflows, automated pipelines</p>
+                    </div>
+                    
+                    <div class="matrix-quadrant fill-ins">
+                        <p class="matrix-label">Low Difficulty, Low Impact</p>
+                        <h4>Fill-Ins</h4>
+                        <p><strong>Do If Time</strong> — Easy but not game-changing. Mention as possibilities, don't prioritize.</p>
+                        <p><strong>Examples:</strong> Formatting documents, simple translations, basic scheduling</p>
+                    </div>
+                    
+                    <div class="matrix-quadrant avoid">
+                        <p class="matrix-label">High Difficulty, Low Impact</p>
+                        <h4>Avoid</h4>
+                        <p><strong>Don't Do</strong> — Hard to do and not worth it. Actively steer away from these.</p>
+                        <p><strong>Examples:</strong> Complex integrations for rarely-used processes, over-engineered solutions for simple problems</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: var(--gray-100); border-radius: 16px; margin-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">Key Teaching Point</h3>
+                    <p style="font-size: 1.1rem; color: var(--gray-700); max-width: 700px; margin: 0 auto;">Most clients want to jump to Strategic Bets (shiny objects). <strong>Discipline is starting with Quick Wins</strong> to build muscle. Each win builds confidence and skills for the next level.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The 6 Primitives -->
+        <section id="primitives" class="section-gray">
+            <div class="container">
+                <h2 style="text-align: center;">The 6 Use Case <span class="gradient-text">Primitives</span></h2>
+                <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">Every AI use case is a combination of these fundamental capabilities. Identify which primitives matter most for your role, then start with Quick Wins in those areas.</p>
+                
+                <div class="primitives-grid" style="margin-top: 3rem;">
+                    <div class="primitive-card">
+                        <div class="primitive-icon">1</div>
+                        <h4>Content Creation</h4>
+                        <p>Draft, edit, adapt written content</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Email editing, first drafts, proofreading</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">2</div>
+                        <h4>Research</h4>
+                        <p>Find, compile, summarize information</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Competitor lookup, meeting prep, market research</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">3</div>
+                        <h4>Coding</h4>
+                        <p>Write, debug, explain code</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Simple scripts, formula help, no-code prototypes</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">4</div>
+                        <h4>Data Analysis</h4>
+                        <p>Interpret, visualize, find patterns</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Spreadsheet analysis, trend identification</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">5</div>
+                        <h4>Ideation & Strategy</h4>
+                        <p>Brainstorm, plan, pressure-test ideas</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Campaign brainstorming, decision frameworks</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">6</div>
+                        <h4>Automation</h4>
+                        <p>Recurring tasks on autopilot</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Meeting summaries, weekly updates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Context Engineering -->
+        <section id="context-engineering">
+            <div class="container">
+                <h2 style="text-align: center;">Context Engineering: <span class="gradient-text">The Simple Pattern</span></h2>
+                <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">The foundation of effective AI communication. Master this pattern and you'll outperform 90% of AI users.</p>
+                
+                <div class="card" style="max-width: 800px; margin: 3rem auto; padding: 3rem;">
+                    <div style="font-family: monospace; background: var(--gray-900); color: var(--accent); padding: 2rem; border-radius: 12px; font-size: 1.1rem; line-height: 2;">
+                        <div><span style="color: var(--secondary);">ROLE</span>        → Who is the AI? What expertise should it have?</div>
+                        <div><span style="color: var(--secondary);">GOAL</span>        → What are you trying to accomplish?</div>
+                        <div><span style="color: var(--secondary);">CONTEXT</span>     → What does the AI need to know?</div>
+                        <div><span style="color: var(--secondary);">CONSTRAINTS</span> → What should it NOT do? What are the limits?</div>
+                        <div><span style="color: var(--secondary);">FORMAT</span>      → What should the output look like?</div>
+                        <div><span style="color: var(--secondary);">ITERATE</span>     → Refine, don't accept the first output</div>
+                    </div>
+                </div>
+                
+                <div class="grid-3" style="margin-top: 3rem;">
+                    <div class="card">
+                        <h4>Quality > Quantity</h4>
+                        <p>Quality of context matters more than quantity. A few well-chosen details beat a wall of text. Be selective about what you include.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Be Explicit</h4>
+                        <p>Who is the audience? What does "good" look like? The AI doesn't know what you know—tell it. Assume nothing is obvious.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Iterate Relentlessly</h4>
+                        <p>"Make this better" and "What am I missing?" are valid prompts. Save refined prompts as reusable templates for future use.</p>
+                    </div>
+                </div>
+                
+                <div class="transition-section" style="margin-top: 3rem;">
+                    <h3>The Iteration Imperative</h3>
+                    <p class="lead">The first output is a draft. Mastery comes from the 10th. Most people give up after output #1. Treat AI like a collaborator, not a vending machine.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="section-gray">
+            <div class="container">
+                <h2 style="text-align: center;">Additional <span class="gradient-text">Resources</span></h2>
+                <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto;">More materials and tools coming soon. Check back regularly for updates.</p>
+                
+                <div class="grid-3" style="margin-top: 3rem;">
+                    <div class="card" style="text-align: center; opacity: 0.7;">
+                        <div class="card-icon">1</div>
+                        <h4>Prompt Library</h4>
+                        <p>Coming Soon</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500);">A curated collection of proven prompts for common use cases.</p>
+                    </div>
+                    <div class="card" style="text-align: center; opacity: 0.7;">
+                        <div class="card-icon">2</div>
+                        <h4>Video Tutorials</h4>
+                        <p>Coming Soon</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500);">Step-by-step video guides for key frameworks and techniques.</p>
+                    </div>
+                    <div class="card" style="text-align: center; opacity: 0.7;">
+                        <div class="card-icon">3</div>
+                        <h4>Agent Templates</h4>
+                        <p>Coming Soon</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500);">Pre-built agents you can customize for your specific workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Need Help Implementing?</h2>
+                <p class="lead" style="color: rgba(255, 255, 255, 0.95);">These frameworks are most powerful with guided implementation. Let's discuss how to apply them to your specific situation.</p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="contact.html" class="btn btn-secondary">Schedule a Coaching Session</a>
+                    <a href="mailto:contact@aestusconsulting.com" class="btn btn-primary">Email Us Directly</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox for infographics -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img src="" alt="Enlarged infographic" id="lightbox-img">
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                        <p>Preparing biotech and pharma companies to ride the AI transformation wave to 10x productivity gains.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="philosophy.html">Our Philosophy</a></li>
+                            <li><a href="methodology.html">Methodology</a></li>
+                            <li><a href="portal.html">Client Portal</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                            <li><a href="contact.html">Book a Strategy Session</a></li>
+                            <li><a href="contact.html#survey">Take AI Quick Check</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Password check
+        const CORRECT_PASSWORD = 'risingtide';
+        
+        function checkPassword() {
+            const input = document.getElementById('passwordInput');
+            const error = document.getElementById('passwordError');
+            const gate = document.getElementById('passwordGate');
+            const content = document.getElementById('portalContent');
+            
+            if (input.value.toLowerCase() === CORRECT_PASSWORD) {
+                gate.classList.add('hidden');
+                content.classList.add('visible');
+                // Store in session so they don't have to re-enter during this visit
+                sessionStorage.setItem('portalAccess', 'granted');
+                // Scroll to top
+                window.scrollTo(0, 0);
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        }
+        
+        // Check if already authenticated this session
+        document.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') === 'granted') {
+                document.getElementById('passwordGate').classList.add('hidden');
+                document.getElementById('portalContent').classList.add('visible');
+            }
+            
+            // Focus password input
+            const passwordInput = document.getElementById('passwordInput');
+            if (passwordInput && !document.getElementById('passwordGate').classList.contains('hidden')) {
+                passwordInput.focus();
+            }
+        });
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards and sections for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.portal-content .card, .primitive-card, .matrix-quadrant');
+            animatedElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+                observer.observe(el);
+            });
+        });
+
+        // Lightbox functions
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
