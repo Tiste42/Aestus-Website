@@ -168,6 +168,35 @@ nav {
     width: 80%;
 }
 
+/* Client Portal CTA */
+.nav-links a.nav-cta {
+    background: var(--gradient-1);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    margin-left: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-links a.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+    background: var(--gradient-1); /* Maintain gradient on hover */
+    color: var(--white);
+}
+
+.nav-links a.nav-cta::after {
+    display: none; /* Remove underline effect */
+}
+
+/* Mobile Portal CTA */
+.mobile-nav a.nav-cta {
+    color: var(--primary);
+    font-weight: 700;
+    background: rgba(0, 102, 204, 0.05);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
