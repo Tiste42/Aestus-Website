@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building with AI | Client Portal | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/portal.css">
+</head>
+<body>
+    <!-- Access Check Overlay -->
+    <div class="access-check" id="accessCheck">
+        <div class="password-box">
+            <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" style="height: 80px; margin-bottom: 1.5rem;">
+            <h2>Client Portal</h2>
+            <p>Please verify your access to continue.</p>
+            <a href="../portal.html" class="btn btn-primary" style="width: 100%;">Enter Access Code</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html">
+                <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../philosophy.html">Philosophy</a></li>
+                <li><a href="../methodology.html">Methodology</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../portal.html" class="nav-portal-btn">Client Portal</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../index.html">Home</a>
+            <a href="../philosophy.html">Philosophy</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../portal.html">Client Portal</a>
+        </div>
+    </nav>
+
+    <!-- Portal Sub-Navigation -->
+    <div class="portal-subnav">
+        <div class="container">
+            <a href="index.html" class="portal-subnav-item">Start Here</a>
+            <a href="models.html" class="portal-subnav-item">Models</a>
+            <a href="engineering.html" class="portal-subnav-item">Context & Prompts</a>
+            <a href="frameworks.html" class="portal-subnav-item">Frameworks</a>
+            <a href="use-cases.html" class="portal-subnav-item">Use Cases</a>
+            <a href="assistants.html" class="portal-subnav-item">Assistants</a>
+            <a href="glossary.html" class="portal-subnav-item">Glossary</a>
+            <a href="building.html" class="portal-subnav-item active">Building with AI</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="portal-page" id="portalPage">
+        <section class="page-header" style="padding-top: 180px;">
+            <div class="container">
+                <h1>Building with <span class="gradient-text">AI</span></h1>
+                <p class="lead">Creating your own tools, visuals, and assets without a development team.</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <!-- Empowerment Intro -->
+                <div class="card" style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary);">You Are a Builder Now</h2>
+                    <p class="lead">You don't need to know Python or Javascript. If you can speak your native language, you can code. We call this "Vibe Coding" or "Create with Code."</p>
+                    <p>You can spin up simple apps to solve your own problems—a gym tracker, a daily planner, a motivation app, or a simple game from your childhood—just by describing what you want.</p>
+                </div>
+
+                <!-- Tools Grid -->
+                <h2 style="margin-bottom: 2rem;">The Builder's Toolkit</h2>
+                <div class="grid-2">
+                    <!-- NotebookLM -->
+                    <div class="problem-card">
+                        <h4>NotebookLM (Google)</h4>
+                        <p><strong>Superpower:</strong> Instant expertise & Audio Overviews.</p>
+                        <p>Upload 50 PDFs, websites, or slides. It grounds its answers <em>only</em> in those sources (no hallucinations). It can also generate a "Deep Dive" audio podcast where two AI hosts discuss your material. Incredible for learning while commuting.</p>
+                    </div>
+
+                    <!-- Nano Banana Pro -->
+                    <div class="problem-card">
+                        <h4>Nano Banana Pro (Google)</h4>
+                        <p><strong>Superpower:</strong> Text-Perfect Visuals & Context.</p>
+                        <p>Powered by Gemini 3. It nails text in images (no gibberish) and compresses large ideas into stunning visual representations. It understands context deeply, making it the ultimate tool for turning abstract strategies into concrete visuals.</p>
+                    </div>
+
+                    <!-- Vibe Coding (Cursor/Replit) -->
+                    <div class="problem-card">
+                        <h4>Cursor / Replit</h4>
+                        <p><strong>Superpower:</strong> Building Software.</p>
+                        <p>Use "Composer" mode to write natural language instructions ("Make a website that tracks my water intake") and watch it write the code, fix errors, and deploy it.</p>
+                    </div>
+
+                    <!-- Video/Audio -->
+                    <div class="problem-card">
+                        <h4>Multimodal Tools</h4>
+                        <p><strong>Superpower:</strong> Content Expansion.</p>
+                        <p>Turn a blog post into a video script. Turn that script into a voiceover with ElevenLabs. Turn that voiceover into a video with HeyGen or Sora. One idea, many formats.</p>
+                    </div>
+                </div>
+
+                <!-- Fun Quote -->
+                <div class="transition-section" style="margin-top: 4rem;">
+                    <h3>Start Small, Have Fun</h3>
+                    <p class="lead">Don't try to build the next Facebook. Build a "Daily Affirmation Generator" for yourself. <strong>Play</strong> is the fastest way to learn these tools.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                        <p>Preparing biotech and pharma companies to ride the AI transformation wave.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="../philosophy.html">Our Philosophy</a></li>
+                            <li><a href="../methodology.html">Methodology</a></li>
+                            <li><a href="../portal.html">Client Portal</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                            <li><a href="../contact.html">Book a Strategy Session</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') !== 'granted') {
+                document.getElementById('accessCheck').style.display = 'flex';
+                document.getElementById('portalPage').style.display = 'none';
+            } else {
+                document.getElementById('accessCheck').style.display = 'none';
+                document.getElementById('portalPage').style.display = 'block';
+            }
+        });
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
+

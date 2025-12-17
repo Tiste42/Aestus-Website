@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Here | Client Portal | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/portal.css">
+</head>
+<body>
+    <!-- Access Check Overlay -->
+    <div class="access-check" id="accessCheck">
+        <div class="password-box">
+            <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" style="height: 80px; margin-bottom: 1.5rem;">
+            <h2>Client Portal</h2>
+            <p>Please verify your access to continue.</p>
+            <a href="../portal.html" class="btn btn-primary" style="width: 100%;">Enter Access Code</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html">
+                <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../philosophy.html">Philosophy</a></li>
+                <li><a href="../methodology.html">Methodology</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../portal.html" class="nav-portal-btn">Client Portal</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../index.html">Home</a>
+            <a href="../philosophy.html">Philosophy</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../portal.html">Client Portal</a>
+        </div>
+    </nav>
+
+    <!-- Portal Sub-Navigation -->
+    <div class="portal-subnav">
+        <div class="container">
+            <a href="index.html" class="portal-subnav-item active">Start Here</a>
+            <a href="models.html" class="portal-subnav-item">Models</a>
+            <a href="engineering.html" class="portal-subnav-item">Context & Prompts</a>
+            <a href="frameworks.html" class="portal-subnav-item">Frameworks</a>
+            <a href="use-cases.html" class="portal-subnav-item">Use Cases</a>
+            <a href="assistants.html" class="portal-subnav-item">Assistants</a>
+            <a href="glossary.html" class="portal-subnav-item">Glossary</a>
+            <a href="building.html" class="portal-subnav-item">Building with AI</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="portal-page" id="portalPage">
+        <section class="page-header" style="padding-top: 180px;">
+            <div class="container">
+                <h1>Start <span class="gradient-text">Here</span></h1>
+                <p class="lead">AI is a journey. Start with the right mindset and culture.</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <!-- Philosophy / Expert Quote -->
+                <div class="card" style="text-align: center; margin-bottom: 3rem; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); border: 1px solid var(--primary);">
+                    <h3 style="font-size: 1.75rem; color: var(--primary-dark); margin-bottom: 1.5rem;">"There are no AI experts, just people who have practiced more with you."</h3>
+                    <p class="lead" style="max-width: 700px; margin: 0 auto;">
+                        This is a brand new field. The people who dive in headfirst and practice with these tools will be lightyears ahead of those who don't.
+                    </p>
+                    <p style="margin-top: 1.5rem; font-weight: 600;">
+                        Early adopters who practice obtain a <span class="gradient-text">10x to 100x advantage</span>. It is a superpower until everyone catches up.
+                    </p>
+                </div>
+
+                <!-- Mindset & Culture Grid -->
+                <h2 style="margin-bottom: 2rem;">Mindset & Culture</h2>
+                <div class="grid-2">
+                    <div class="belief-card">
+                        <h4>Psychological Safety</h4>
+                        <p><strong>Share openly.</strong> Don't be afraid to share your best practices or your failures. We learn faster when we learn together. There is no "stupid question" in a field this new.</p>
+                    </div>
+                    <div class="belief-card">
+                        <h4>Responsible Innovation</h4>
+                        <p><strong>Use it powerfully, but safely.</strong> Don't be stifled by fear, but understand the boundaries. Innovation happens when we push limits within a safe framework.</p>
+                    </div>
+                    <div class="belief-card">
+                        <h4>No "Shadow AI"</h4>
+                        <p><strong>Don't hide your tools.</strong> Using unapproved tools in secret compromises data security. If you find a great tool, bring it to the light so we can vet it and everyone can use it safely.</p>
+                    </div>
+                    <div class="belief-card">
+                        <h4>The "PhD Intern" Mindset</h4>
+                        <p>Treat the AI like a brilliant PhD-level intern who is new to the company. They are smart but lack context. They need guidance, clear instructions, and iteration to succeed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                        <p>Preparing biotech and pharma companies to ride the AI transformation wave.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="../philosophy.html">Our Philosophy</a></li>
+                            <li><a href="../methodology.html">Methodology</a></li>
+                            <li><a href="../portal.html">Client Portal</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                            <li><a href="../contact.html">Book a Strategy Session</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Check portal access
+        document.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') !== 'granted') {
+                document.getElementById('accessCheck').style.display = 'flex';
+                document.getElementById('portalPage').style.display = 'none';
+            } else {
+                document.getElementById('accessCheck').style.display = 'none';
+                document.getElementById('portalPage').style.display = 'block';
+            }
+        });
+
+        // Mobile menu
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
+

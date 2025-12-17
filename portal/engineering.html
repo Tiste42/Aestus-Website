@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context & Prompt Engineering | Client Portal | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/portal.css">
+</head>
+<body>
+    <!-- Access Check Overlay -->
+    <div class="access-check" id="accessCheck">
+        <div class="password-box">
+            <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" style="height: 80px; margin-bottom: 1.5rem;">
+            <h2>Client Portal</h2>
+            <p>Please verify your access to continue.</p>
+            <a href="../portal.html" class="btn btn-primary" style="width: 100%;">Enter Access Code</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html">
+                <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../philosophy.html">Philosophy</a></li>
+                <li><a href="../methodology.html">Methodology</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../portal.html" class="nav-portal-btn">Client Portal</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../index.html">Home</a>
+            <a href="../philosophy.html">Philosophy</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../portal.html">Client Portal</a>
+        </div>
+    </nav>
+
+    <!-- Portal Sub-Navigation -->
+    <div class="portal-subnav">
+        <div class="container">
+            <a href="index.html" class="portal-subnav-item">Start Here</a>
+            <a href="models.html" class="portal-subnav-item">Models</a>
+            <a href="engineering.html" class="portal-subnav-item active">Context & Prompts</a>
+            <a href="frameworks.html" class="portal-subnav-item">Frameworks</a>
+            <a href="use-cases.html" class="portal-subnav-item">Use Cases</a>
+            <a href="assistants.html" class="portal-subnav-item">Assistants</a>
+            <a href="glossary.html" class="portal-subnav-item">Glossary</a>
+            <a href="building.html" class="portal-subnav-item">Building with AI</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="portal-page" id="portalPage">
+        <section class="page-header" style="padding-top: 180px;">
+            <div class="container">
+                <h1>Context & Prompt <span class="gradient-text">Engineering</span></h1>
+                <p class="lead">The core skills for getting high-quality output from AI models.</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <!-- Prompt Engineering (RAFT) -->
+                <div class="card" style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary);">Part 1: Prompt Engineering (Basics)</h2>
+                    <p>This is the "low-hanging fruit." Good prompts give clear instructions. We recommend the <strong>RAFT</strong> framework.</p>
+                    
+                    <div class="grid-4" style="margin-top: 2rem; gap: 1rem;">
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200); text-align: center;">
+                            <strong style="color: var(--primary); font-size: 1.5rem;">R</strong>ole
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Who is the AI acting as?</p>
+                        </div>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200); text-align: center;">
+                            <strong style="color: var(--primary); font-size: 1.5rem;">A</strong>udience
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Who is reading this?</p>
+                        </div>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200); text-align: center;">
+                            <strong style="color: var(--primary); font-size: 1.5rem;">F</strong>ormat
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Email? Bullet points? Code?</p>
+                        </div>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200); text-align: center;">
+                            <strong style="color: var(--primary); font-size: 1.5rem;">T</strong>opic
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">What is the task?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Context Engineering -->
+                <div class="card" style="margin-bottom: 3rem; border-left: 4px solid var(--secondary);">
+                    <h2 style="color: var(--secondary);">Part 2: Context Engineering (The Unlock)</h2>
+                    <p class="lead">Prompt engineering is just the tip of the iceberg. <strong>Context Engineering</strong> is providing the background materials (PDFs, previous emails, data sets) so the AI actually "knows" what you know.</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>The Goldilocks Principle:</strong> Don't dump your entire hard drive. Don't give nothing. Give <em>relevant</em> documents that contain the answers you need.</li>
+                        <li><strong>Access to Tools:</strong> If you want it to analyze data, give it the spreadsheet. If you want it to summarize a meeting, give it the transcript.</li>
+                        <li><strong>Reference Examples:</strong> Show, don't just tell. "Write it like this [paste example]" is more powerful than describing the style for 5 paragraphs.</li>
+                    </ul>
+                </div>
+
+                <!-- Troubleshooting -->
+                <h2 style="margin-bottom: 2rem;">Troubleshooting & Navigation</h2>
+                <div class="grid-3">
+                    <div class="belief-card">
+                        <h4>Path Obsession</h4>
+                        <p>Sometimes the AI gets stuck in a loop, trying the same wrong solution over and over. <strong>Break the loop.</strong> Say "Stop. This isn't working. Let's try a completely different approach."</p>
+                    </div>
+
+                    <div class="belief-card">
+                        <h4>Context Transfer</h4>
+                        <p>Long chats get "stale" and the AI forgets early details. If a chat gets too long/confusing, summarize the key points and <strong>start a fresh chat</strong> with that summary as the new context.</p>
+                    </div>
+
+                    <div class="belief-card">
+                        <h4>Task Separation</h4>
+                        <p>Don't mix unrelated tasks in one thread. "New Task = New Chat." It keeps the context clean and prevents the AI from getting confused by previous instructions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                        <p>Preparing biotech and pharma companies to ride the AI transformation wave.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="../philosophy.html">Our Philosophy</a></li>
+                            <li><a href="../methodology.html">Methodology</a></li>
+                            <li><a href="../portal.html">Client Portal</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                            <li><a href="../contact.html">Book a Strategy Session</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') !== 'granted') {
+                document.getElementById('accessCheck').style.display = 'flex';
+                document.getElementById('portalPage').style.display = 'none';
+            } else {
+                document.getElementById('accessCheck').style.display = 'none';
+                document.getElementById('portalPage').style.display = 'block';
+            }
+        });
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
+

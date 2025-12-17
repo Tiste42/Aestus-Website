@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case Library | Client Portal | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/portal.css">
+</head>
+<body>
+    <!-- Access Check Overlay -->
+    <div class="access-check" id="accessCheck">
+        <div class="password-box">
+            <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" style="height: 80px; margin-bottom: 1.5rem;">
+            <h2>Client Portal</h2>
+            <p>Please verify your access to continue.</p>
+            <a href="../portal.html" class="btn btn-primary" style="width: 100%;">Enter Access Code</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html">
+                <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../philosophy.html">Philosophy</a></li>
+                <li><a href="../methodology.html">Methodology</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../portal.html" class="nav-portal-btn">Client Portal</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../index.html">Home</a>
+            <a href="../philosophy.html">Philosophy</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../portal.html">Client Portal</a>
+        </div>
+    </nav>
+
+    <!-- Portal Sub-Navigation -->
+    <div class="portal-subnav">
+        <div class="container">
+            <a href="index.html" class="portal-subnav-item">Start Here</a>
+            <a href="models.html" class="portal-subnav-item">Models</a>
+            <a href="engineering.html" class="portal-subnav-item">Context & Prompts</a>
+            <a href="frameworks.html" class="portal-subnav-item">Frameworks</a>
+            <a href="use-cases.html" class="portal-subnav-item active">Use Cases</a>
+            <a href="assistants.html" class="portal-subnav-item">Assistants</a>
+            <a href="glossary.html" class="portal-subnav-item">Glossary</a>
+            <a href="building.html" class="portal-subnav-item">Building with AI</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="portal-page" id="portalPage">
+        <section class="page-header" style="padding-top: 180px;">
+            <div class="container">
+                <h1>Use Case <span class="gradient-text">Library</span></h1>
+                <p class="lead">Practical examples organized by core capabilities.</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Every AI use case is a combination of these fundamental capabilities. Identify which capabilities matter most for your role, then start with Quick Wins.</p>
+                
+                <div class="primitives-grid">
+                    <div class="primitive-card">
+                        <div class="primitive-icon">1</div>
+                        <h4>Content Creation</h4>
+                        <p>Draft, edit, adapt written content</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Email editing, first drafts, proofreading</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">2</div>
+                        <h4>Research</h4>
+                        <p>Find, compile, summarize information</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Competitor lookup, meeting prep, market research</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">3</div>
+                        <h4>Coding</h4>
+                        <p>Write, debug, explain code</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Simple scripts, formula help, no-code prototypes</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">4</div>
+                        <h4>Data Analysis</h4>
+                        <p>Interpret, visualize, find patterns</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Spreadsheet analysis, trend identification</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">5</div>
+                        <h4>Ideation & Strategy</h4>
+                        <p>Brainstorm, plan, pressure-test ideas</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Campaign brainstorming, decision frameworks</p>
+                    </div>
+                    
+                    <div class="primitive-card">
+                        <div class="primitive-icon">6</div>
+                        <h4>Automation</h4>
+                        <p>Recurring tasks on autopilot</p>
+                        <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;"><strong>Quick Wins:</strong> Meeting summaries, weekly updates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                        <p>Preparing biotech and pharma companies to ride the AI transformation wave.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="../philosophy.html">Our Philosophy</a></li>
+                            <li><a href="../methodology.html">Methodology</a></li>
+                            <li><a href="../portal.html">Client Portal</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                            <li><a href="../contact.html">Book a Strategy Session</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') !== 'granted') {
+                document.getElementById('accessCheck').style.display = 'flex';
+                document.getElementById('portalPage').style.display = 'none';
+            } else {
+                document.getElementById('accessCheck').style.display = 'none';
+                document.getElementById('portalPage').style.display = 'block';
+            }
+        });
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
+

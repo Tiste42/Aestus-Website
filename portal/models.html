@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Models & Capabilities | Client Portal | Aestus Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/portal.css">
+</head>
+<body>
+    <!-- Access Check Overlay -->
+    <div class="access-check" id="accessCheck">
+        <div class="password-box">
+            <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" style="height: 80px; margin-bottom: 1.5rem;">
+            <h2>Client Portal</h2>
+            <p>Please verify your access to continue.</p>
+            <a href="../portal.html" class="btn btn-primary" style="width: 100%;">Enter Access Code</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html">
+                <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../philosophy.html">Philosophy</a></li>
+                <li><a href="../methodology.html">Methodology</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../portal.html" class="nav-portal-btn">Client Portal</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../index.html">Home</a>
+            <a href="../philosophy.html">Philosophy</a>
+            <a href="../methodology.html">Methodology</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../portal.html">Client Portal</a>
+        </div>
+    </nav>
+
+    <!-- Portal Sub-Navigation -->
+    <div class="portal-subnav">
+        <div class="container">
+            <a href="index.html" class="portal-subnav-item">Start Here</a>
+            <a href="models.html" class="portal-subnav-item active">Models</a>
+            <a href="engineering.html" class="portal-subnav-item">Context & Prompts</a>
+            <a href="frameworks.html" class="portal-subnav-item">Frameworks</a>
+            <a href="use-cases.html" class="portal-subnav-item">Use Cases</a>
+            <a href="assistants.html" class="portal-subnav-item">Assistants</a>
+            <a href="glossary.html" class="portal-subnav-item">Glossary</a>
+            <a href="building.html" class="portal-subnav-item">Building with AI</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="portal-page" id="portalPage">
+        <section class="page-header" style="padding-top: 180px;">
+            <div class="container">
+                <h1>Models & <span class="gradient-text">Capabilities</span></h1>
+                <p class="lead">Top AI Models as of December 2025. Understanding your AI "co-workers."</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                
+                <!-- Co-worker Mental Model -->
+                <div class="card" style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary);">The "Co-Worker" Mental Model</h2>
+                    <p class="lead">Think of different AI models like different specialists on your team. Match the model to the task.</p>
+                    <div class="grid-3" style="margin-top: 2rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 12px;">
+                            <h4>🧠 Senior Engineer</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Claude Opus 4.5, o1/o3</p>
+                            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.5rem;">Complex architecture, critical decisions</p>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 12px;">
+                            <h4>⚡ Reliable All-Rounder</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Gemini 3 Pro, Claude Sonnet 4.5</p>
+                            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.5rem;">Daily work, most tasks</p>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 12px;">
+                            <h4>🚀 Speed Demon</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Gemini 3 Flash, Haiku 3.5</p>
+                            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.5rem;">Quick tasks, high volume</p>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 12px;">
+                            <h4>🎨 Creative Partner</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">GPT-5.2, Grok 4.1</p>
+                            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.5rem;">Brainstorming, content, personality</p>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 12px;">
+                            <h4>🔍 Research Analyst</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Gemini 3 Pro, Grok 4.1</p>
+                            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.5rem;">Deep research, real-time data</p>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 12px;">
+                            <h4>💰 Budget Powerhouse</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">DeepSeek v3.2</p>
+                            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.5rem;">Quality at lowest cost</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flagships -->
+                <h2 style="margin-bottom: 2rem;">🏆 Flagship Models</h2>
+                <div class="grid-2" style="margin-bottom: 3rem;">
+                    <div class="problem-card">
+                        <div class="problem-label" style="background: #faf5ff; color: #6b46c1;">Anthropic</div>
+                        <h4>Claude Opus 4.5</h4>
+                        <p>Anthropic's heavyweight. Best for complex coding, agentic workflows, long-horizon autonomous tasks. <strong>80.9% on SWE-bench.</strong></p>
+                        <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.75rem;">Released Nov 24, 2025 | $5/1M input, $25/1M output</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-label" style="background: #ebf8ff; color: #2b6cb0;">Google</div>
+                        <h4>Gemini 3 Pro</h4>
+                        <p>Google's flagship. First model to break <strong>1500 Elo on LMArena</strong>. Industry-leading reasoning, multimodal, coding. 100% on AIME 2025 with code execution.</p>
+                        <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.75rem;">Top of leaderboards | Strong in Google/Vertex</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-label" style="background: #f0fff4; color: #2f855a;">OpenAI</div>
+                        <h4>GPT-5.2</h4>
+                        <p>OpenAI's current top. <strong>Perfect score on AIME 2025 without tools.</strong> Strong for algorithm optimization, scientific computing. Most human-like prose.</p>
+                        <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.75rem;">Great for creative writing + technical work</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-label" style="background: #fff5f5; color: #c53030;">xAI</div>
+                        <h4>Grok 4.1</h4>
+                        <p>xAI's latest (Nov 17, 2025). 1483 Elo on LMArena. <strong>65% reduction in hallucinations.</strong> Best emotional intelligence/personality. Real-time X/web data.</p>
+                        <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.75rem;">Best for witty style + current events</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-label" style="background: #fffaf0; color: #c05621;">OpenAI</div>
+                        <h4>o1 / o3</h4>
+                        <p>OpenAI's "thinking models." Slow and expensive, but <strong>best for the hardest math, proofs, and algorithmic reasoning.</strong> Purpose-built for complex problems.</p>
+                        <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: 0.75rem;">Use when other models fail on hard logic</p>
+                    </div>
+                </div>
+
+                <!-- Daily Drivers / Speed -->
+                <h2 style="margin-bottom: 2rem;">⚡ Daily Drivers / Speed</h2>
+                <div class="grid-3" style="margin-bottom: 3rem;">
+                    <div class="problem-card">
+                        <h4>Claude Sonnet 4.5</h4>
+                        <p>Anthropic's workhorse. <strong>Best balance of speed + quality</strong> for coding, agents, and daily work.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h4>Gemini 3 Flash</h4>
+                        <p>Google's speed demon. 3x faster than 2.5 Pro. <strong>$0.50/1M input.</strong> Beat GPT-5.2 on MMMU-Pro (81.2% vs 79.5%).</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h4>GPT-4o mini</h4>
+                        <p>OpenAI's cheap/fast option. High throughput for product integration.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h4>DeepSeek v3.2</h4>
+                        <p>"GPT-5 level performance" at <strong>fraction of cost</strong>. Tool use in thinking/non-thinking modes. Best budget option for coding/reasoning.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h4>Claude Haiku 3.5</h4>
+                        <p>Fastest closed-source. <strong>Ultra-cheap</strong> for high-volume tasks.</p>
+                    </div>
+                </div>
+
+                <!-- By Use Case -->
+                <h2 style="margin-bottom: 2rem;">By Use Case</h2>
+                
+                <div class="grid-2" style="margin-bottom: 2rem;">
+                    <div class="card">
+                        <h4 style="color: var(--primary);">💻 Coding</h4>
+                        <ul class="feature-list" style="margin-top: 1rem;">
+                            <li><strong>Claude Opus 4.5</strong> — Top benchmark scores, best for complex/agentic coding</li>
+                            <li><strong>DeepSeek v3.2</strong> — Best value; near-flagship performance</li>
+                            <li><strong>Gemini 3 Pro</strong> — Strong multimodal, image-to-code</li>
+                            <li><strong>GPT-5.2</strong> — Great for algorithms, scientific computing</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary);">🧠 Reasoning & Analysis</h4>
+                        <ul class="feature-list" style="margin-top: 1rem;">
+                            <li><strong>Gemini 3 Pro</strong> — Leads LMArena, deep multi-step analysis</li>
+                            <li><strong>o1/o3</strong> — Purpose-built for hardest problems</li>
+                            <li><strong>Claude Opus 4.5</strong> — Excellent formal logic</li>
+                            <li><strong>DeepSeek v3.2-Speciale</strong> — Rivals Gemini 3 Pro, math olympiad gold-level</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary);">✍️ Creative Writing</h4>
+                        <ul class="feature-list" style="margin-top: 1rem;">
+                            <li><strong>GPT-5.2</strong> — Most human-like prose</li>
+                            <li><strong>Claude Opus/Sonnet 4.5</strong> — Controlled, coherent long-form</li>
+                            <li><strong>Grok 4.1</strong> — Best personality/emotional awareness; witty style</li>
+                            <li><strong>Gemini 3 Pro</strong> — Good for educational content</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary);">🤖 Agentic / Tool Use</h4>
+                        <ul class="feature-list" style="margin-top: 1rem;">
+                            <li><strong>Claude Opus 4.5</strong> — Built for long-running autonomous workflows</li>
+                            <li><strong>Claude Sonnet 4.5</strong> — Best balance for production agents</li>
+                            <li><strong>Gemini 3 Pro</strong> — Strong in Google/Vertex frameworks</li>
+                            <li><strong>DeepSeek v3.2</strong> — Cost-effective, tool use in thinking mode</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary);">🖼️ Multimodal</h4>
+                        <ul class="feature-list" style="margin-top: 1rem;">
+                            <li><strong>Gemini 3 Pro</strong> — Best for docs, images, video, long-context</li>
+                            <li><strong>GPT-5.2</strong> — Native text+image+audio+video</li>
+                            <li><strong>Claude Opus 4.5</strong> — Strong image understanding</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary);">💰 Budget-Conscious</h4>
+                        <ul class="feature-list" style="margin-top: 1rem;">
+                            <li><strong>DeepSeek v3.2</strong> — Flagship capability at fraction of cost</li>
+                            <li><strong>Gemini 3 Flash</strong> — Fast, cheap, still beats GPT-5.2 on some benchmarks</li>
+                            <li><strong>Claude Haiku 3.5</strong> — Cheapest Anthropic option</li>
+                            <li><strong>GPT-4o mini</strong> — Low-cost OpenAI option</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-size: 0.85rem; color: var(--gray-500); margin-top: 2rem;"><em>Last updated: December 2025. Model landscape changes rapidly. Check provider sites for latest pricing and capabilities.</em></p>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../assets/images/aestuslogowhite.png" alt="Aestus Consulting" class="footer-logo">
+                        <p>Preparing biotech and pharma companies to ride the AI transformation wave.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="../philosophy.html">Our Philosophy</a></li>
+                            <li><a href="../methodology.html">Methodology</a></li>
+                            <li><a href="../portal.html">Client Portal</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
+                            <li><a href="../contact.html">Book a Strategy Session</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aestus Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') !== 'granted') {
+                document.getElementById('accessCheck').style.display = 'flex';
+                document.getElementById('portalPage').style.display = 'none';
+            } else {
+                document.getElementById('accessCheck').style.display = 'none';
+                document.getElementById('portalPage').style.display = 'block';
+            }
+        });
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
