@@ -508,6 +508,20 @@
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+
+                    // Remove entrance-only delays so hover interactions respond immediately
+                    if (entry.target.dataset.entranceDelayCleared !== '1') {
+                        entry.target.dataset.entranceDelayCleared = 'listening';
+                        const targetEl = entry.target;
+                        const onTransitionEnd = (e) => {
+                            // Clear delays after the entrance transition finishes
+                            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+                            targetEl.style.transitionDelay = '0s, 0s, 0s';
+                            targetEl.dataset.entranceDelayCleared = '1';
+                            targetEl.removeEventListener('transitionend', onTransitionEnd);
+                        };
+                        targetEl.addEventListener('transitionend', onTransitionEnd);
+                    }
                 }
             });
         }, observerOptions);
@@ -516,9 +530,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const animatedElements = document.querySelectorAll('.portal-content .card, .primitive-card, .matrix-quadrant');
             animatedElements.forEach((el, index) => {
+                const delaySeconds = index * 0.05;
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
-                el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+                // Entrance animation with staggered delay (delay is cleared after reveal)
+                el.dataset.entranceDelay = String(delaySeconds);
+                el.dataset.entranceDelayCleared = '0';
+                el.style.transition = `opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease`;
+                el.style.transitionDelay = `${delaySeconds}s, ${delaySeconds}s, 0s`;
                 observer.observe(el);
             });
         });

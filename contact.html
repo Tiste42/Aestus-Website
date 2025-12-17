@@ -45,75 +45,37 @@
     <!-- Contact Options -->
     <section>
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p style="margin-bottom: 2rem;">Whether you're just starting to explore AI possibilities or ready to scale your transformation, we'd love to hear from you.</p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">✉</div>
-                        <div>
-                            <h4>Email Us</h4>
-                            <p><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></p>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p class="lead" style="margin-bottom: 3rem;">Whether you're just starting to explore AI possibilities or ready to scale your transformation, we'd love to hear from you.</p>
+                
+                <div class="grid-2" style="gap: 2rem;">
+                    <!-- Email Option -->
+                    <div class="card" style="padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">✉</div>
+                        <h3 style="margin-bottom: 1rem; color: var(--gray-800);">Contact by Email</h3>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                            <a href="mailto:contact@aestusconsulting.com" style="color: var(--primary); font-weight: 600; text-decoration: none;">contact@aestusconsulting.com</a>
+                            <button onclick="copyEmail(event)" id="copyEmailBtn" type="button" class="btn btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.95rem;">Copy</button>
                         </div>
+                        <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Reach out directly and we'll respond within 24-48 business hours.</p>
                     </div>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">✓</div>
-                        <div>
-                            <h4>Book a Strategy Session</h4>
-                            <p>Schedule a personalized 90-minute CEO strategy session to assess your AI readiness.</p>
-                            <a href="mailto:contact@aestusconsulting.com?subject=Strategy%20Session%20Request" class="btn btn-secondary" style="margin-top: 1rem;">Request Session</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">🌐</div>
-                        <div>
-                            <h4>Website</h4>
-                            <p><a href="https://www.aestusconsulting.com">www.aestusconsulting.com</a></p>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-100); border-radius: 16px;">
-                        <h4 style="margin-bottom: 1rem;">What to Expect</h4>
-                        <ul class="feature-list">
-                            <li>Response within 24-48 business hours</li>
-                            <li>No-pressure conversation about your needs</li>
-                            <li>Customized recommendations for your situation</li>
-                        </ul>
-                    </div>
+                    <!-- Survey Option -->
+                    <a href="#survey" class="card" style="padding: 3rem 2rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">📋</div>
+                        <h3 style="margin-bottom: 1rem; color: var(--gray-800);">Complete Our Survey</h3>
+                        <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Help us understand your AI adoption status with our quick 5-minute assessment.</p>
+                        <span class="btn btn-secondary" style="margin-top: auto;">Take Survey ↓</span>
+                    </a>
                 </div>
                 
-                <div>
-                    <div class="card" style="padding: 2rem;">
-                        <h3 style="margin-bottom: 1rem;">Quick Contact</h3>
-                        <p style="margin-bottom: 1.5rem; color: var(--gray-600);">Send us a message and we'll get back to you promptly.</p>
-                        
-                        <form action="mailto:contact@aestusconsulting.com" method="post" enctype="text/plain">
-                            <div style="margin-bottom: 1.5rem;">
-                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Your Name</label>
-                                <input type="text" name="name" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
-                            </div>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Email Address</label>
-                                <input type="email" name="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
-                            </div>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Company</label>
-                                <input type="text" name="company" style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
-                            </div>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">How Can We Help?</label>
-                                <textarea name="message" rows="4" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 12px; font-size: 1rem; resize: vertical; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'" placeholder="Tell us about your AI transformation goals..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                        </form>
-                    </div>
+                <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-100); border-radius: 16px;">
+                    <h4 style="margin-bottom: 1rem;">What to Expect</h4>
+                    <ul class="feature-list" style="text-align: left; max-width: 400px; margin: 0 auto;">
+                        <li>Response within 24-48 business hours</li>
+                        <li>No-pressure conversation about your needs</li>
+                        <li>Customized recommendations for your situation</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -207,7 +169,6 @@
                     <h4>Contact</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:contact@aestusconsulting.com">contact@aestusconsulting.com</a></li>
-                        <li><a href="contact.html">Book a Strategy Session</a></li>
                         <li><a href="contact.html#survey">Take AI Quick Check</a></li>
                     </ul>
                 </div>
@@ -219,6 +180,49 @@
     </footer>
 
     <script>
+        // Copy email to clipboard
+        function copyEmail(event) {
+            const email = 'contact@aestusconsulting.com';
+            const btn = event ? event.target : document.getElementById('copyEmailBtn');
+            // Cache the original label once per button to avoid race conditions on rapid clicks
+            if (!btn.dataset.originalText) {
+                btn.dataset.originalText = btn.textContent;
+            }
+            const originalText = btn.dataset.originalText;
+
+            // Clear any pending reset for this button before scheduling a new one
+            if (btn.dataset.resetTimeoutId) {
+                clearTimeout(Number(btn.dataset.resetTimeoutId));
+            }
+            
+            navigator.clipboard.writeText(email).then(function() {
+                btn.textContent = 'Copied! ✓';
+                btn.style.background = '#10b981';
+                const timeoutId = setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.dataset.resetTimeoutId = '';
+                }, 2000);
+                btn.dataset.resetTimeoutId = String(timeoutId);
+            }).catch(function() {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                btn.textContent = 'Copied! ✓';
+                btn.style.background = '#10b981';
+                const timeoutId = setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.dataset.resetTimeoutId = '';
+                }, 2000);
+                btn.dataset.resetTimeoutId = String(timeoutId);
+            });
+        }
+
         // Mobile menu functionality
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
@@ -272,6 +276,20 @@
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+
+                    // Remove entrance-only delays so hover interactions respond immediately
+                    if (entry.target.dataset.entranceDelayCleared !== '1') {
+                        entry.target.dataset.entranceDelayCleared = 'listening';
+                        const targetEl = entry.target;
+                        const onTransitionEnd = (e) => {
+                            // Clear delays after the entrance transition finishes
+                            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+                            targetEl.style.transitionDelay = '0s, 0s, 0s';
+                            targetEl.dataset.entranceDelayCleared = '1';
+                            targetEl.removeEventListener('transitionend', onTransitionEnd);
+                        };
+                        targetEl.addEventListener('transitionend', onTransitionEnd);
+                    }
                 }
             });
         }, observerOptions);
@@ -280,9 +298,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const animatedElements = document.querySelectorAll('.card, .contact-item');
             animatedElements.forEach((el, index) => {
+                const delaySeconds = index * 0.1;
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
-                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                // Entrance animation with staggered delay (delay is cleared after reveal)
+                el.dataset.entranceDelay = String(delaySeconds);
+                el.dataset.entranceDelayCleared = '0';
+                el.style.transition = `opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease`;
+                el.style.transitionDelay = `${delaySeconds}s, ${delaySeconds}s, 0s`;
                 observer.observe(el);
             });
         });
