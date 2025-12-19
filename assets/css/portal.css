@@ -615,5 +615,27 @@
         grid-template-columns: 1fr !important;
         gap: 2rem;
     }
+
+    /* Portal Sub-Navigation Mobile Fix */
+    .portal-subnav {
+        top: 66px;
+        box-shadow: 0 2px 10px rgba(0, 102, 204, 0.2);
+    }
+    
+    .portal-subnav .container {
+        padding: 0 16px;
+        justify-content: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .portal-subnav-item {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 4px 4px 0 0;
+    }
+    
+    .portal-page .page-header {
+        padding-top: 140px !important;
+    }
 }
 
