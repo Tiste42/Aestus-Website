@@ -618,7 +618,7 @@
 
     /* Portal Sub-Navigation Mobile Fix */
     .portal-subnav {
-        top: 66px;
+        top: 82px;
         box-shadow: 0 2px 10px rgba(0, 102, 204, 0.2);
     }
     
@@ -635,7 +635,18 @@
     }
     
     .portal-page .page-header {
-        padding-top: 140px !important;
+        padding-top: 160px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller screens have 40px logo instead of 50px */
+    .portal-subnav {
+        top: 72px;
+    }
+    
+    .portal-page .page-header {
+        padding-top: 150px !important;
     }
 }
 
