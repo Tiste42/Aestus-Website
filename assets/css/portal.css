@@ -20,15 +20,16 @@
     top: 74px;
     left: 0;
     right: 0;
-    background: var(--white);
-    border-bottom: 1px solid var(--gray-200);
+    background: linear-gradient(135deg, #0066cc 0%, #00a3cc 100%);
+    border-bottom: none;
     z-index: 900;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.25);
 }
 
 .portal-subnav .container {
     display: flex;
-    gap: 0;
+    justify-content: center;
+    gap: 0.5rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -40,23 +41,26 @@
 
 .portal-subnav-item {
     flex-shrink: 0;
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.5rem;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--gray-500);
+    color: rgba(255, 255, 255, 0.85);
     position: relative;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background 0.2s ease;
     white-space: nowrap;
+    border-radius: 6px 6px 0 0;
 }
 
 .portal-subnav-item:hover {
-    color: var(--primary);
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .portal-subnav-item.active {
-    color: var(--primary);
+    color: var(--white);
     font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .portal-subnav-item.active::after {
@@ -66,7 +70,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--gradient-1);
+    background: var(--white);
     border-radius: 3px 3px 0 0;
 }
 
@@ -97,6 +101,11 @@
 @media (max-width: 768px) {
     .portal-subnav {
         top: 74px;
+    }
+    
+    .portal-subnav .container {
+        justify-content: flex-start;
+        padding: 0 0.5rem;
     }
     
     .portal-subnav-item {
