@@ -623,7 +623,7 @@
 
     /* Portal Sub-Navigation Mobile - Dropdown */
     .portal-subnav {
-        top: 52px; /* Mobile: snug fit under nav bar */
+        top: 48px; /* Mobile nav height - snug fit */
     }
     
     /* Hide horizontal tabs on mobile */
