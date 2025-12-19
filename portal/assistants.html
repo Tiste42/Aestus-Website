@@ -57,7 +57,16 @@
             <a href="glossary.html" class="portal-subnav-item">Glossary</a>
             <a href="building.html" class="portal-subnav-item">Building with AI</a>
         </div>
-        <span class="portal-subnav-arrow">›</span>
+        <select class="portal-subnav-select" onchange="window.location.href=this.value">
+            <option value="index.html">First Principles</option>
+            <option value="models.html">Models</option>
+            <option value="engineering.html">Context & Prompts</option>
+            <option value="frameworks.html">Frameworks</option>
+            <option value="use-cases.html">Use Cases</option>
+            <option value="assistants.html" selected>Assistants</option>
+            <option value="glossary.html">Glossary</option>
+            <option value="building.html">Building with AI</option>
+        </select>
     </div>
 
     <!-- Page Content -->

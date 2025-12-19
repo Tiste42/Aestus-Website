@@ -26,54 +26,9 @@
     box-shadow: 0 4px 20px rgba(0, 102, 204, 0.25);
 }
 
-/* Mobile scroll indicators - fade gradients to show more content */
-.portal-subnav-scroll-hint {
+/* Mobile Dropdown Select - hidden on desktop */
+.portal-subnav-select {
     display: none;
-}
-
-@media (max-width: 768px) {
-    .portal-subnav::before,
-    .portal-subnav::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 30px;
-        pointer-events: none;
-        z-index: 10;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    
-    .portal-subnav::before {
-        left: 0;
-        background: linear-gradient(to right, #0066cc 0%, transparent 100%);
-    }
-    
-    .portal-subnav::after {
-        right: 0;
-        background: linear-gradient(to left, #00a3cc 0%, transparent 100%);
-        opacity: 1; /* Always show right indicator initially */
-    }
-    
-    /* Scroll arrow indicator */
-    .portal-subnav-arrow {
-        display: block;
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.9rem;
-        z-index: 20;
-        pointer-events: none;
-        animation: scrollHint 1.5s ease-in-out infinite;
-    }
-    
-    @keyframes scrollHint {
-        0%, 100% { transform: translateY(-50%) translateX(0); opacity: 0.9; }
-        50% { transform: translateY(-50%) translateX(3px); opacity: 1; }
-    }
 }
 
 .portal-subnav .container {
@@ -666,30 +621,45 @@
         gap: 2rem;
     }
 
-    /* Portal Sub-Navigation Mobile Fix */
+    /* Portal Sub-Navigation Mobile - Dropdown */
     .portal-subnav {
-        top: 74px; /* Match desktop value - works consistently */
+        top: 74px;
     }
     
+    /* Hide horizontal tabs on mobile */
     .portal-subnav .container {
-        padding: 0;
-        justify-content: flex-start;
-        gap: 0;
-        position: relative;
+        display: none;
     }
     
-    .portal-subnav-item {
-        padding: 0.85rem 1rem;
-        font-size: 0.8rem;
-        border-radius: 0;
+    /* Show dropdown on mobile */
+    .portal-subnav-select {
+        display: block;
+        width: 100%;
+        padding: 1rem 3rem 1rem 1.25rem;
+        background: transparent;
+        border: none;
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.25rem;
     }
     
-    .portal-subnav-item:first-child {
-        padding-left: 16px;
+    .portal-subnav-select:focus {
+        outline: none;
     }
     
-    .portal-subnav-item:last-child {
-        padding-right: 50px; /* Extra space for fade indicator */
+    .portal-subnav-select option {
+        background: #0066cc;
+        color: white;
+        padding: 0.75rem;
     }
     
     .portal-page .page-header {
@@ -699,7 +669,7 @@
 
 @media (max-width: 480px) {
     .portal-subnav {
-        top: 64px; /* Smaller nav on very small screens */
+        top: 64px;
     }
     
     .portal-page .page-header {
