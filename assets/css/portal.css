@@ -17,7 +17,7 @@
 /* Portal Sub-Navigation */
 .portal-subnav {
     position: fixed;
-    top: 74px;
+    top: 82px; /* Desktop: 50px logo + 32px padding */
     left: 0;
     right: 0;
     background: linear-gradient(135deg, #0066cc 0%, #00a3cc 100%);
@@ -623,7 +623,7 @@
 
     /* Portal Sub-Navigation Mobile - Dropdown */
     .portal-subnav {
-        top: 74px;
+        top: 56px; /* Mobile: 40px logo + 16px padding (tighter on mobile) */
     }
     
     /* Hide horizontal tabs on mobile */
@@ -635,7 +635,7 @@
     .portal-subnav-select {
         display: block;
         width: 100%;
-        padding: 1rem 3rem 1rem 1.25rem;
+        padding: 0.875rem 3rem 0.875rem 1.25rem;
         background: transparent;
         border: none;
         color: var(--white);
@@ -663,17 +663,7 @@
     }
     
     .portal-page .page-header {
-        padding-top: 160px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .portal-subnav {
-        top: 64px;
-    }
-    
-    .portal-page .page-header {
-        padding-top: 150px !important;
+        padding-top: 140px !important;
     }
 }
 
