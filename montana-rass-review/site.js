@@ -1,0 +1,1 @@
+document.querySelectorAll(".section-title").forEach((button)=>{button.addEventListener("click",()=>button.classList.toggle("collapsed"));});
